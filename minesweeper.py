@@ -42,11 +42,13 @@ center_frame.place(
 
 for x in range(settings.grid_size):
     for y in range(settings.grid_size):
-        c = Cell()
+        c = Cell(x, y)
         c.create_btn_object(center_frame)
         c.cell_btn_object.grid(
             column=y, row=x
         )
+
+Cell.randomize_mines()
 
 # Run the window
 root.mainloop()
